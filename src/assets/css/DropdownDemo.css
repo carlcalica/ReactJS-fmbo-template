@@ -1,0 +1,55 @@
+.dropdown-action .p-dropdown {
+    width: 14rem;
+}
+
+.dropdown-action .country-item-value img.flag {
+    width: 17px;
+}
+
+.dropdown-action .card{
+    padding: 15px;
+}
+
+.datatable-crud-demo .p-datatable .p-datatable-header {
+    border: none;
+}
+
+.datatable-crud-demo .card .p-toolbar.p-component {
+    border: none;
+}
+
+.dropdown-action .p-dropdown:before {
+    content: "\e941";
+    font-family: 'primeicons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 5px;
+    margin: auto;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.dropdown-action .p-dropdown {
+    width: fit-content;
+}
+
+.dropdown-action .p-inputtext {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 12px;
+}
+
+.pi {
+    font-size: 12px !important;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: #fff !important;
+    background: #2574A9 !important;
+}
