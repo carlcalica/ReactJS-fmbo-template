@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
+import { NavLink } from "react-router-dom";
 
 const MenuItem = (props) => {
-    const { name, subMenus, iconClassName } = props;
+    const { name, subMenus, iconClassName, to, exact, onClick } = props;
     const [expand, setExpand] = useState(false);
 
     return(
-        <li>
-            <a href="/#" onClick={() => setExpand(!expand)} className="menu-item"> 
+        <li onClick={props.onClick}>
+            <NavLink exact to={to} onClick={() => setExpand(!expand)} className="menu-item"> 
                 <div className="menu-icon">
                     <i class={iconClassName}></i>
                 </div>
                 <span>{name}</span>
-            </a>
+            </NavLink>
             {
                 subMenus && subMenus.length > 0 ? (
                 
             <ul className={`sub-menu ${expand ? "active" : ""} `}>
                 {subMenus.map((menu, index) => ( 
-                <li><a href="/#"> {menu.name}</a></li>
+                <li><NavLink to={menu.to}> {menu.name}</NavLink></li>
                 ))}
             </ul>
         ) : null }

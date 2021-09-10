@@ -6,4 +6,3 @@ export default class ProductService {
         return axios.get('data/products.json').then(res => res.data.data);
     }
 }
-    

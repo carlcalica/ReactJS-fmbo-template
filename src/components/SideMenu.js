@@ -5,12 +5,12 @@ import logo from '../assets/img/logo192.png';
 import MenuItem from './MenuItem';
 
 const menuItems = [
-    {name: 'Dashboard', to: '/', iconClassName: 'bi bi-speedometer'},
-    {name: 'Content', 
-    to: '/content', 
+    {name: 'Dashboard', exact: true, to: '/', iconClassName: 'bi bi-speedometer'},
+    {name: 'Content', exact: true,
+    to: '/content',
     iconClassName: 'bi bi-speedometer',
     subMenus: [
-        {name: "Course"}, {name: "Videos"}
+        {name: "Course", to: '/content/courses'}, {name: "Videos", to: '/content/videos'},
     ]},
     {name: 'Design', to: '/design', iconClassName: 'bi bi-pen'},
 
@@ -32,7 +32,11 @@ const SideMenu = (props) => {
 
     return(
         <div onMouseEnter={() => {setInactive(!inactive); }}
-            className={`side-menu ${inactive ? "inactive" : "" }`}>
+            className={`side-menu ${inactive ? "inactive" : "" }`}
+            
+            onMouseLeave={() => {setInactive(!inactive); }}
+            className={`side-menu ${inactive ? "" : "inactive" }`}
+            >
             <div className="top-section">
                 <div className="logo">
                     <img src={logo} alt="logo" />
@@ -50,6 +54,7 @@ const SideMenu = (props) => {
                             menuItems.map((menuItem, index) => 
                             <MenuItem key={index} 
                             name={menuItem.name}
+                            exact={menuItem.true}
                             to ={menuItem.to} 
                             subMenus={menuItem.subMenus || []}
                             iconClassName={menuItem.iconClassName}
