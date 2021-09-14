@@ -20,7 +20,7 @@ const Dashboard = () => {
   return <h1>test</h1>
 }
 
-const Courses = () => {
+const Deposit = () => {
   return (
     <div>
       <div className="table-container p-shadow-4" >
@@ -51,8 +51,8 @@ function App() {
             <Route exact path={'/'}>
               <Dashboard />
             </Route>
-            <Route path={'/content/courses'}>
-              <Courses />
+            <Route path={'/deposit/bt'}>
+              <Deposit />
             </Route>
           </Switch>
         </div>

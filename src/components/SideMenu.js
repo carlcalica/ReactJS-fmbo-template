@@ -5,14 +5,14 @@ import logo from '../assets/img/logo192.png';
 import MenuItem from './MenuItem';
 
 const menuItems = [
-    {name: 'Dashboard', exact: true, to: '/', iconClassName: 'bi bi-speedometer'},
-    {name: 'Content', exact: true,
-    to: '/content',
+    { name: 'Dashboard', exact: true, to: '/', iconClassName: 'bi bi-speedometer' },
+    { name: 'Main Menu', to: '/design', iconClassName: 'bi bi-pen' },
+    {name: 'Deposit', exact: true,
+    to: '/deposit',
     iconClassName: 'bi bi-speedometer',
     subMenus: [
-        {name: "Course", to: '/content/courses'}, {name: "Videos", to: '/content/videos'},
+        { name: "Bank Transfer", to: '/deposit/bt'}, {name: "Payment Gateway", to: '/deposit/pg'},
     ]},
-    {name: 'Design', to: '/design', iconClassName: 'bi bi-pen'},
 
 ]
 
