@@ -121,11 +121,6 @@ body{
 }
 
 .side-menu .main-menu .sub-menu.active a:active{
-    /* background: blue;
-    display: block;
-    box-sizing: border-box;
-    padding: 5px;
-    border-radius: 5px; */
 
     background: #222;
     display: block;
